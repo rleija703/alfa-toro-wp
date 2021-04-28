@@ -1,5 +1,6 @@
 <?php
 add_action( 'after_setup_theme', 'dontlookatmytheme_theme_support' );
+add_action( 'init', 'dontlookatmytheme_menus' );
 
 function dontlookatmytheme_theme_support() {
     /*
@@ -16,4 +17,15 @@ function dontlookatmytheme_theme_support() {
 	 * provide it for us.
 	 */
 	add_theme_support( 'title-tag' );
+}
+
+/**
+ * Register navigation menus uses wp_nav_menu in one place.
+ */
+function dontlookatmytheme_menus() {
+	$locations = array(
+		'primary' => __( 'Desktop Horizontal Menu', 'dontlookatmytheme' ),
+	);
+
+	register_nav_menus( $locations );
 }
