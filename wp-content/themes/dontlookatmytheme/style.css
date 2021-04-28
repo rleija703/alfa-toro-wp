@@ -185,3 +185,64 @@ p {
 	margin: 30px auto 0;
     color: #000c;
 }
+
+/* Lists ------------------------------------- */
+
+ul,
+ol {
+	margin: 0;
+}
+
+.content > ul,
+.content > ol {
+    margin: 29px auto 0px;
+    font-size: 18px;
+    line-height: 30px;
+    color: #000c;
+    font-weight: 300;
+    list-style-position: outside;
+    padding-left: 20px;
+}
+
+/* Quotes ------------------------------------ */
+
+blockquote {
+    position: relative;
+    font-size: 19px;
+    padding-top: 25px;
+    padding-bottom: 1.5rem;
+    margin-top: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
+    font-family: CharterITCStd-Regular;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+    line-height: 39px;
+    background-color: #f5f5f5;
+    border-radius: 5px;
+    color: #000;
+}
+
+blockquote:before {
+    content: "\201c";
+    font-family: Gulkave-Regular;
+    color: #000;
+    line-height: 1;
+    position: absolute;
+    top: -40px;
+    left: 6px;
+    font-size: 130px;
+    opacity: .1;
+}
+
+/* Media ------------------------------------- */
+figure {
+    margin-top: 30px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: auto;
+}
