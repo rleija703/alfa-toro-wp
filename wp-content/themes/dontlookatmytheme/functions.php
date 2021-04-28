@@ -1,6 +1,7 @@
 <?php
 add_action( 'after_setup_theme', 'dontlookatmytheme_theme_support' );
 add_action( 'init', 'dontlookatmytheme_menus' );
+add_action( 'wp_enqueue_scripts', 'dontlookatmytheme_register_styles' );
 
 function dontlookatmytheme_theme_support() {
     /*
@@ -28,4 +29,11 @@ function dontlookatmytheme_menus() {
 	);
 
 	register_nav_menus( $locations );
+}
+
+/**
+ * Register and Enqueue Styles.
+ */
+function dontlookatmytheme_register_styles() {
+	wp_enqueue_style( 'dontlookatmytheme-style', get_stylesheet_uri() );
 }
