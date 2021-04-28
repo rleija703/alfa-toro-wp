@@ -95,7 +95,6 @@ blockquote::after {
 
 
 html {
-	font-size: 62.5%; /* 1rem = 10px */
 	scroll-behavior: smooth;
 }
 
@@ -106,7 +105,7 @@ html {
 }
 
 body {
-	background: #f5efe0;
+	background: #fff;
 	box-sizing: border-box;
 	color: #000;
 	font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, sans-serif;
@@ -133,4 +132,56 @@ body {
 
 #site-content {
 	overflow: hidden;
+}
+
+/* -------------------------------------------------------------------------- */
+
+/*	2. Element Base
+/* ---------------------------------------------*---------------------------- */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.faux-heading {
+	font-feature-settings: "lnum";
+	font-variant-numeric: lining-nums;
+	font-weight: 700;
+	line-height: 1.2;
+}
+
+h1,
+.heading-size-1 {
+	font-size: 3.125rem;
+    margin-bottom: 18px;
+}
+
+h2,
+.heading-size-2 {
+	font-size: 2rem;
+    color: #272727;
+    margin: 32px auto 0;
+}
+
+h3,
+.heading-size-3 {
+    margin: 38px auto 0px;
+	font-size: 1.96875rem;
+}
+
+h4,
+.heading-size-4 {
+	font-size: 1.25rem;
+    font-weight: 400;
+    color: grey;
+    margin: 56px auto 0px;
+}
+
+p {
+	line-height: 35px;
+    font-size: 1.25rem;
+	margin: 30px auto 0;
+    color: #000c;
 }
