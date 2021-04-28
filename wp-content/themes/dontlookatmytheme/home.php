@@ -11,7 +11,9 @@
                     <?php the_post(); ?>
                     <article class="archive__post">
                         <header class="archive__header">
-                            <h2 class="archive__title"><?php the_title(); ?></h2>
+                            <h2 class="archive__title">
+                                <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+                            </h2>
                             <div class="archive__author">
                                 <?php print get_the_author_meta( "display_name" ); ?>
                             </div>

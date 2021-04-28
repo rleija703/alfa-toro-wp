@@ -186,6 +186,16 @@ p {
     color: #000c;
 }
 
+a {
+    color: #000;
+    text-decoration: none;
+    transition: .2s color ease;
+}
+
+a:hover {
+    color: #6c757d;
+}
+
 /* Lists ------------------------------------- */
 
 ul,
@@ -267,6 +277,10 @@ img {
     font-weight: 700;
 }
 
+.button:hover {
+    color: #7b74ff;
+}
+
 /* -------------------------------------------------------------------------- */
 
 /*	8. Post: Archive
@@ -343,4 +357,17 @@ img {
     .archive__sidebar {
         display: flex;
     }
+}
+
+/* -------------------------------------------------------------------------- */
+
+/*	8. Post: Single
+/* -------------------------------------------------------------------------- */
+
+.post__content > a {
+    background-image: linear-gradient(120deg,#b1a8fd 0%,#7f6fff 100%);
+    background-repeat: no-repeat;
+    background-size: 100% .2em;
+    background-position: 0 110%;
+    color: #000c;
 }
