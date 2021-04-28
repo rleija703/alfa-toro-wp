@@ -371,3 +371,51 @@ img {
     background-position: 0 110%;
     color: #000c;
 }
+
+/* -------------------------------------------------------------------------- */
+
+/*	13. Site Pagination
+/* -------------------------------------------------------------------------- */
+
+.pagination .screen-reader-text {
+    display: none;
+}
+
+.pagination {
+    margin-top: 3rem;
+    display: flex;
+    justify-content: center;
+}
+
+.pagination .nav-links {
+    display: inline-block;
+    padding: 0;
+    color: #adb5bd;
+    font-size: .875rem;
+}
+
+.pagination .nav-links > a,
+.pagination .nav-links > span{
+    display: inline-block;
+    padding: 0 .5rem;
+}
+
+.pagination .nav-links > a:last-child > span:last-child {
+    margin-left: .5rem;
+}
+
+.pagination .nav-links > a:first-child > span:last-child {
+    margin-left: .5rem;
+}
+
+/* -------------------------------------------------------------------------- */
+
+/*	16. Site Footer
+/* -------------------------------------------------------------------------- */
+
+.site-footer {
+    background: #fff;
+    margin-top: 3rem;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}

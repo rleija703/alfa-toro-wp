@@ -35,6 +35,7 @@
                     </article>
                 <?php endwhile; ?>
             <?php endif; ?>
+            <?php get_template_part( 'template-parts/pagination' ); ?>
         </div>
         <div class="archive__sidebar"></div>
     </main>
