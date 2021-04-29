@@ -43,6 +43,6 @@
             <?php endif; ?>
             <?php get_template_part( 'template-parts/pagination' ); ?>
         </div>
-        <div class="home__sidebar"></div>
+        <!-- <div class="home__sidebar"></div> -->
     </main>
 <?php get_footer(); ?>

@@ -564,17 +564,23 @@ input[type="submit"] {
     color: #000c;
 }
 
-.post__content > ul,
-.post__content > ol {
+.post__content ul,
+.post__content ol {
     margin-top: 30px;
     padding-left: 30px;
 }
 
-.post__content > figure {
+.post__content figure {
     margin: 30px 0 0;
+    width: 100%;
 }
 
-.post__content > figure > figcaption {
+.post__content figure .twitter-tweet {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.post__content figure figcaption {
     text-align: center;
     color: rgba(0,0,0,.8);
     font-size: 14px;
