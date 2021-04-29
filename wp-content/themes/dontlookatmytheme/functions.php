@@ -3,6 +3,9 @@ add_action( 'after_setup_theme', 'dontlookatmytheme_theme_support' );
 add_action( 'init', 'dontlookatmytheme_menus' );
 add_action( 'wp_enqueue_scripts', 'dontlookatmytheme_register_styles' );
 
+add_filter( 'style_loader_src',  'dontlookatmytheme_remove_ver_css_js', 9999, 2 );
+add_filter( 'script_loader_src', 'dontlookatmytheme_remove_ver_css_js', 9999, 2 );
+
 function dontlookatmytheme_theme_support() {
     /*
 	 * Enable support for Post Thumbnails on posts and pages.
@@ -35,5 +38,14 @@ function dontlookatmytheme_menus() {
  * Register and Enqueue Styles.
  */
 function dontlookatmytheme_register_styles() {
-	wp_enqueue_style( 'dontlookatmytheme-style', get_stylesheet_uri() );
+	wp_enqueue_style( 'dontlookatmytheme-style', get_stylesheet_uri(), array() );
+}
+
+function dontlookatmytheme_remove_ver_css_js( $src, $handle ) {
+    $handles_with_version = [ 'style' ]; // <-- Adjust to your needs!
+
+    if ( strpos( $src, 'ver=' ) && ! in_array( $handle, $handles_with_version, true ) )
+        $src = remove_query_arg( 'ver', $src );
+
+    return $src;
 }

@@ -1,34 +1,39 @@
 <?php get_header(); ?>
-    <div class="hero">
-        <h1>Join 50,000+ and get cutting-edge SEO tactics we don't share in public</h1>
-        <h2>Join SEOs at Amazon, IBM & Cisco who get in-depth guides they can actually use</h2>
-        <div class="subscribe-form"></div>
+    <div class="home__hero">
+        <h1 class="home__hero-title">Welcome to Alfa Toro where we talk about stocks and building wealth</h1>
+        <h2 class="home__hero-subheader">Join our community and stay up-to-date with our new posts</h2>
+        <div class="home__subscribe-form">
+            <form>
+                <input type="email" class="home__subscribe-field" placeholder="Your email address" />
+                <input type="submit" class="home__subscribe-submit" value="Subscribe">
+            </form>
+        </div>
     </div>
-    <main class="archive">
-        <div class="archive__posts">
+    <main class="home__main">
+        <div class="home__posts">
             <?php if ( have_posts() ) : ?>
                 <?php while ( have_posts() ) : ?>
                     <?php the_post(); ?>
-                    <article class="archive__post">
-                        <header class="archive__header">
-                            <h2 class="archive__title">
+                    <article class="home__post">
+                        <header class="home__header">
+                            <h2 class="home__title">
                                 <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
                             </h2>
-                            <div class="archive__author">
+                            <div class="home__author">
                                 <?php print get_the_author_meta( "display_name" ); ?>
                             </div>
-                            <div class="archive__post-date">
+                            <div class="home__post-date">
                                 <?php print get_the_date( "F j, Y" ); ?>
                             </div>
                         </header>
                         <?php if ( has_post_thumbnail() ) : ?>
-                            <div class="archive__img">
+                            <div class="home__img">
                                 <?php print get_the_post_thumbnail(); ?>
                             </div>
                         <?php endif; ?>
-                        <div class="archive__excerpt">
+                        <div class="home__excerpt">
                             <?php the_excerpt(); ?>
-                            <div class="archive__action">
+                            <div class="home__action">
                                 <a class="button" href="<?php the_permalink(); ?>">View Post</a>
                             </div>
                         </div>
@@ -37,6 +42,6 @@
             <?php endif; ?>
             <?php get_template_part( 'template-parts/pagination' ); ?>
         </div>
-        <div class="archive__sidebar"></div>
+        <div class="home__sidebar"></div>
     </main>
 <?php get_footer(); ?>
