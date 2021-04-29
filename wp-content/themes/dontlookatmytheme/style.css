@@ -659,6 +659,8 @@ input.home__subscribe-field {
     margin-top: 3rem;
     padding: 3rem 20px;
     display: flex;
+    max-width: 1380px;
+    margin: auto;
 }
 
 .site-footer__column {
