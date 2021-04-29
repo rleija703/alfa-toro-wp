@@ -461,12 +461,67 @@ input[type="submit"] {
 /*	8. Post: Single
 /* -------------------------------------------------------------------------- */
 
-.post__content > a {
+.post__main {
+    max-width: 1380px;
+    padding: 55px 20px 0;
+    margin: auto;
+}
+
+.post__header {
+    margin-bottom: 40px;
+    box-shadow: rgb(23 43 99 / 24%) 0 7px 28px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgba(0,0,0,.15);
+}
+
+@media (min-width: 1380px) {
+    .post__header {
+        height: 370px;
+    }
+}
+
+.post__title {
+    margin-bottom: 50px;
+    color: #fff;
+}
+
+.post__metadata {
+    color: rgba(255,255,255,.8);
+    font-size: 15.7px;
+}
+
+.post__content {
+    max-width: 720px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.post__content a {
     background-image: linear-gradient(120deg,#b1a8fd 0%,#7f6fff 100%);
     background-repeat: no-repeat;
     background-size: 100% .2em;
     background-position: 0 110%;
     color: #000c;
+}
+
+.post__content > ul,
+.post__content > ol {
+    margin-top: 30px;
+    padding-left: 30px;
+}
+
+.post__content > figure {
+    margin: 30px 0 0;
+}
+
+.post__content > figure > figcaption {
+    text-align: center;
+    color: rgba(0,0,0,.8);
+    font-size: 14px;
+    margin-bottom: 0;
 }
 
 /* -------------------------------------------------------------------------- */
