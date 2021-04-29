@@ -3,9 +3,10 @@
         <h1 class="home__hero-title">Welcome to Alfa Toro where we talk about stocks and building wealth</h1>
         <h2 class="home__hero-subheader">Join our community and stay up-to-date with our new posts</h2>
         <div class="home__subscribe-form">
-            <form>
-                <input type="email" class="home__subscribe-field" placeholder="Your email address" />
+            <form method="post" action="https://app.convertkit.com/forms/870463/subscriptions">
+                <input type="email" name="email_address" class="home__subscribe-field" placeholder="Your email address" />
                 <input type="submit" class="home__subscribe-submit" value="Subscribe">
+                <input type="hidden" name="fields[site]" value="alfa-toro">
             </form>
         </div>
     </div>
