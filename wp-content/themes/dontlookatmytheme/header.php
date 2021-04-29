@@ -7,3 +7,6 @@
         <?php wp_head(); ?>
     </head>
     <body <?php body_class(); ?>>
+        <nav class="site-header">
+            <a href="<?php print site_url(); ?>">Alfa Toro</a>
+        </nav>
