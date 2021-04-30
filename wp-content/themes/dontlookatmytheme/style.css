@@ -520,7 +520,7 @@ input.home__subscribe-field {
     align-items: flex-start;
     padding: 20px;
     flex-direction: column;
-    background-color: rgba(0,0,0,.15);
+    background-color: #374aff;
 }
 
 .post__header:before {
